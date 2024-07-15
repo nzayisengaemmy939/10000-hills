@@ -1,0 +1,65 @@
+// Import variables if needed
+@import "../../styles/variables.scss";
+
+.about-us-section {
+  background-color: #edf1fd;
+  min-height: 90vh; // Use min-height for responsiveness
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10px;
+
+  .about-us-main {
+    margin-left: 150px; // Initial margin for larger screens
+    margin-right: 150px;
+    padding: 0 20px; // Adjust padding for responsiveness
+    // Initial margin for larger screens
+
+    .heading {
+      h1 {
+        font-size: 2em;
+        color: $primary-color; // Example of using a variable from variables.scss
+      }
+
+      hr {
+        height: 6px;
+        width: 80px;
+        background-color: rgb(27, 63, 168);
+        border: none; // Remove border
+        margin: 10px auto; // Center horizontally with margin
+      }
+    }
+  }
+
+  .about-us {
+    text-align: justify;
+    font-family: "Open Sans", sans-serif;
+img{
+  float: left;
+  width: 40%;
+  height: 300px;
+  margin-right: 10px;
+}
+    
+      h4 {
+        padding-top: 10px;
+      }
+    
+  }
+
+  @media (max-width: 768px) {
+    .about-us-main {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .about-us {
+      img{
+      
+      width: 98%;
+      
+    }
+    }
+    
+  }
+}

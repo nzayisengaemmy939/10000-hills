@@ -1,0 +1,106 @@
+@import "../../styles/variables.scss";
+
+.footer-section{
+  height: 90vh;
+  background-color: $primary-color;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .footer-heading{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    hr{
+      width: 250px;
+    }
+  }
+  footer {
+    color: white;
+    text-align: center;
+    height: 10vh;
+  
+}
+.media {
+  color: white;
+  margin: auto;
+  height: 20vh;
+  margin-top: 10px;
+  width: 40%;
+  text-align: center;
+  /* border: 2px solid red; */
+  img {
+  height: 40px;
+  width: 40px;
+  // filter: invert(100%);
+  margin-right: 20px;
+  margin-top: 20px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50px;
+}
+}
+
+
+  .footer-body{
+    color: white;
+    .contact-details-contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 30px;
+      align-content: center;
+    }
+    
+    .contact-details-contact .email,
+    .address {
+      width: 20%;
+      text-align: center;
+      height: 40vh;
+    }
+    
+    .contact-details-message {
+      margin-left: 30px;
+    }
+    
+    .contact-details-contact .phone {
+      width: 30%;
+      text-align: center;
+      height: 40vh;
+    }
+    
+    .contact-details {
+      display: flex;
+    }
+    
+    .contact-details-message1 {
+      height: 30px;
+      width: 20%;
+    }
+    
+    .contact-details-message1 a {
+      display: block;
+      margin-left: 20px;
+      margin-top: 6px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .contact-details-message1 h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .hr {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: bold;
+    }
+    
+  }
+}
