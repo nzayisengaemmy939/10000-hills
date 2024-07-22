@@ -7,11 +7,13 @@
   margin-right: 150px;
   .service-section{
     background-color: $third-color;
+  margin-top: 30px;
+
     height: 80vh;
     padding: 15px;
     .heading {
       text-align: center;
-      h1 {
+      h3 {
         font-size: 2em;
         color: $primary-color; // Example of using a variable from variables.scss
       }
@@ -19,7 +21,7 @@
       hr {
         height: 6px;
         width: 80px;
-        background-color: rgb(27, 63, 168);
+        background-color: #021742;
         border: none; // Remove border
         margin: 10px auto; // Center horizontally with margin
       }
@@ -30,7 +32,7 @@
       align-items: center;
       flex-direction: row;
       // height: 70vh;
-      font-family: "Open Sans", sans-serif;
+      // font-family: "Open Sans", sans-serif;
       background-color: $third-color;
       
   
@@ -45,14 +47,14 @@
         align-items: center;
         justify-content: center;
         justify-content: space-evenly;
-        box-shadow: 7px 8px 2px 0px #00171f;
+        box-shadow: 2px 2px 2px 0px  #021742;
         border-radius: 10px;
         button {
           align-items: center;
           margin: auto;
           height: 40px;
           width: 200px;
-          border-radius: 15px;
+          border-radius: 4px;
           border: none;
         box-shadow: 1px 1px 2px 0px #00171f;
   

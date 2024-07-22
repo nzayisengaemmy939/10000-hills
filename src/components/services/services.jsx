@@ -17,7 +17,7 @@ const Services = () => {
           </div>
           <div className="cards">
             <div className="card1 card">
-              <h1>Consultance</h1>
+              <h3>Consultance</h3>
               <h4>Tax consultance</h4>
               <br />
 
@@ -26,7 +26,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card2 card">
-              <h1>Advocate Bridge</h1>
+              <h3>Advocate Bridge</h3>
               <h4>Linking people with appropriate advocate</h4>
               <br />
 
@@ -35,7 +35,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card3 card">
-              <h1>Educational support</h1>
+              <h3>Educational support</h3>
               <h4>Interbership</h4>
               <br />
 

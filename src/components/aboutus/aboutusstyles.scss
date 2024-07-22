@@ -11,8 +11,12 @@
   margin-top: -10px;
 
   .about-us-main {
+    margin-top: 30px;
+
     margin-left: 150px; // Initial margin for larger screens
     margin-right: 150px;
+    // background-color: white;
+    color: hsla(0, 0%, 0%, 0.591);
     padding: 0 20px; // Adjust padding for responsiveness
     // Initial margin for larger screens
 
@@ -25,7 +29,7 @@
       hr {
         height: 6px;
         width: 80px;
-        background-color: rgb(27, 63, 168);
+        background-color: #021742;
         border: none; // Remove border
         margin: 10px auto; // Center horizontally with margin
       }

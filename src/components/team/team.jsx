@@ -13,7 +13,7 @@ const AllTeam = () => {
         <center>
           <h1>Meet The Team</h1>
         </center>
-        <hr />
+        <hr style={{backgroundColor:"#021742"}}/>
       </div>
 
       <div className="team">
@@ -35,7 +35,6 @@ const AllTeam = () => {
             TWIZERE
           </h3>
           <div class="description">
-            
             <p>
               LLB candidate with Background in Midwifery, SRHR Specialist with
               GBV Prevention Skills. He worked as RSSB intern Pharmaceutical
@@ -59,16 +58,13 @@ const AllTeam = () => {
             }}
           >
             <div class="likes">
-              
               <h4>CEO & FOUNDER</h4>
             </div>
 
-            <div class="projects">
-            {/* <h4>CEO & FOUNDER</h4> */}
-            </div>
+            <div class="projects">{/* <h4>CEO & FOUNDER</h4> */}</div>
           </footer>
         </div>
-<br />
+        <br />
         <div id="login-container">
           <div
             class="profile-img"
@@ -87,7 +83,6 @@ const AllTeam = () => {
             MBONIMANA
           </h3>
           <div class="description">
-           
             <p>
               Enthusiastic and dedicated Software Developer with a strong
               foundation in computer science and programming principles.
@@ -99,20 +94,20 @@ const AllTeam = () => {
     <a>LinkedIn</a>
   </div> */}
           {/* <button>Hire Me</button> */}
-          <footer style={{
+          <footer
+            style={{
               backgroundImage: `url(${bgImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundColor: "#00171F",
-            }}>
+            }}
+          >
             <div class="likes">
-            <h4>COO & CO-FOUNDER</h4>
+              <h4>COO & CO-FOUNDER</h4>
             </div>
 
-            <div class="projects">
-             
-            </div>
+            <div class="projects"></div>
           </footer>
         </div>
       </div>
@@ -136,27 +131,26 @@ const AllTeam = () => {
             TUGIRAMAHORO
           </h3>
           <div class="description">
-           
             <p>
               Chief Legal Officer at Lachs Golden Ltd, LL.B from Kigali
               Independent University, pursuing LL.M, Executive Director at
               Choice for Hope Initiative. Passionate about social justice.
             </p>
           </div>
-          <footer style={{
+          <footer
+            style={{
               backgroundImage: `url(${bgImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundColor: "#00171F",
-            }}>
+            }}
+          >
             <div class="likes">
-            <h4>HRM & CO-FOUNDER</h4>
+              <h4>HRM & CO-FOUNDER</h4>
             </div>
 
-            <div class="projects">
-             
-            </div>
+            <div class="projects"></div>
           </footer>
         </div>
         <br />
@@ -178,7 +172,6 @@ const AllTeam = () => {
             NZAYISENGA
           </h3>
           <div class="description">
-            
             <p>
               Student at the University of Rwanda in computer science and a
               software developer proficient in multiple programming languages.
@@ -189,20 +182,20 @@ const AllTeam = () => {
     <a>Twitter</a>
     <a>LinkedIn</a>
   </div> */}
-          <footer style={{
+          <footer
+            style={{
               backgroundImage: `url(${bgImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundColor: "#00171F",
-            }}>
+            }}
+          >
             <div class="likes">
-            <h4>CTO & CO-FOUNDER</h4>
+              <h4>CTO & CO-FOUNDER</h4>
             </div>
 
-            <div class="projects">
-             
-            </div>
+            <div class="projects"></div>
           </footer>
         </div>
       </div>
