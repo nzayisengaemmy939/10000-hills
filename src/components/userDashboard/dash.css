@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+
+}
+.dashbord-section{
+    /* background-color: #021742; */
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+.dash-nav{
+    width: 17%;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+    text-transform: uppercase;
+    flex-direction: column;
+    height: 100%;
+    background-color:white;
+    color: hsla(0, 0%, 0%, 0.548);
+}
+.dash-nav div{
+    margin-top: 20px;
+ 
+    margin-left: 10%;
+    gap: 10px;
+    display: flex;
+}
+.dash-nav .home{
+    width: 20px;
+    height: 20px;
+    filter: invert(70%);
+}
+.logo{
+    /* margin-left: 15%; */
+    width: 100px;
+    height:100px;
+}
+.dash-content{
+    width: 83%;
+    background-color: hsla(225, 80%, 92%, 0.993) ;
+
+    height: 100%;
+}
+.profile-container{
+    background-color: white;
+    /* border: 2px solid red; */
+width: 96%;
+margin: auto;
+display: flex;
+align-content: center;
+/* flex-direction: column; */
+
+align-items: center;
+height: 10%;
+
+}
+.profile {
+    width: 13%;
+    margin-right: 20px;
+    /* border: 1px solid black; */
+    height: 50px;
+    position: relative;
+    left: 850px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+   
+}
+.profile img{
+width: 35px;
+height: 35px;
+border: 1px solid #021742;
+border-radius: 50%;
+
+
+}
+.profile p{
+    font-size: 14px;
+    color: #021742;
+}
+/* .profile-line{
+    background-color: hsla(0, 0%, 0%, 0.132);
+    width: 100%;
+    height: 1px;
+} */
+.footer{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: 3px;
+    height: 20px;
+    background-color:  hwb(225 85% 2% / 0.459);
+    padding: 10px 0px;
+}
+
+.dash-cases{
+    width: 100%;
+height: 90%;
+/* border: 2px solid red; */
+}
+.dash-cases h3{
+    margin-left: 20px;
+    position: relative;
+    top:10px;
+    /* text-align: center; */
+    font-size: 19px;
+    color: hsla(0, 0%, 0%, 0.548);
+
+}
+.cases-table{
+    width: 96%;
+    /* border: 2px solid red; */
+    color: hsla(0, 0%, 0%, 0.808);
+    background-color: white;
+    margin-left:20px;
+    z-index: 1;
+    margin-right:20px;
+
+    height: 95%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+table{
+    width: 95%;
+    /* border: 2px solid red; */
+    color: hsla(0, 0%, 0%, 0.808);
+    background-color: white;
+    margin-left:20px;
+    border-collapse: collapse;
+    margin-right:20px;
+
+    height: auto;
+    margin-top: 20px;
+} 
+tr{
+    /* padding: 20px; */
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.358);
+}
+
+tr:last-child {
+    border-bottom: none; /* Remove border from the last row */
+}
+th{
+    text-align: left;
+    /* margin-bottom: 10px; */
+    font-weight: 600;
+    padding-bottom: 12px;
+    width: 14%;
+
+    color: hsla(0, 0%, 0%, 0.548);
+
+}
+td{
+    padding-bottom: 12px;
+    font-size: 15px;
+    /* padding: 5px 7px; */
+    width: 14%;
+    border-radius: 5px;
+}
+.action{
+display: flex;
+gap:20px;
+/* border: 1px solid; */
+
+}
+.action img{
+    width: 22px;
+    height: 22px;
+    margin-top: 10px;
+    border:1px solid blue;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.table-line{
+    background-color: hsla(225, 80%, 92%, 0.53);
+    margin-top: 20px;
+    width: 100px;
+    height: 1px;
+}
+/* about user submit component */
+.submit-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000; /* Higher z-index to ensure it overlays other content */
+}
+.submit-case{
+z-index: 1;
+background-color: white;
+border: 1px solid hsla(0, 0%, 0%, 0.174);
+height: auto;
+/* border-radius: px; */
+box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.174);
+width: 50%;
+}
+.submit-case form{
+    display: flex;
+    flex-direction: column;
+}
+.close{
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+ 
+    font-size: 18px;
+    color: hsla(0, 100%, 50%, 0.589);
+}
+.submit-case p{
+    margin-left: 15%;
+    font-size: 24px;
+}
+.submit-case label{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-left: 15%;
+    
+    margin-top: 10px;
+
+}
+.submit-case label select{
+    width: 80%;
+    height: 40px;
+    /* background-color:  #EDF5F4; */
+
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case label input{
+    width: 80%;
+    height: 40px;
+    /* background-color:  #D1D5DB; */
+
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case label textarea{
+    width: 80%;
+    /* background-color:  #D1D5DB; */
+    height: 130px; 
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case  button{
+    width:68%;
+ 
+    height: 40px; 
+   
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    margin-left: 15%;
+    /* margin: auto; */
+    margin-top: 10px;
+    background-color: #021742;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.prof-detail{
+    position: absolute;
+    right: 50px;
+    top: 0x;
+    /* z-index: 1; */
+    padding:10px;
+    /* width: 600px; */
+    /* color: red; */
+    height: auto;
+    background-color:#edf1fd;
+    border: 1px solid hsla(0, 0%, 0%, 0.135);
+    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.477);
+    border-radius: 5px;
+    /* display: none; */
+  }
+#alldetails{
+    display: flex;
+    gap: 50px;
+    
+    /* background-color:#021742; */
+    justify-content: space-evenly;
+  }
+  .detailicon{
+    width: 15px;
+    height: 15px;
+  }
+  .profile-data{
+    color:hsla(0, 0%, 0%, 0.53)
+  } 
+  .prof-detail span{
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+  }
+  .profile-footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile-footer img{
+    filter: invert(-50%);
+  }
+  .edit{
+    border: 1px solid blue;
+    padding: 2px;
+    border-radius: 2px;
+  }

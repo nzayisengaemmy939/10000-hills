@@ -1,66 +1,96 @@
-import React, { useState, useEffect } from 'react';
-import Card from './Card';
-import './Staff.scss'; // Import the CSS file or include styles here
+import React, { useState, useEffect } from "react";
+// import "./Recently.css";
+// import axios from "axios";
 
-const Staff = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
+export const fetchMovie = async () => {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTEzZmM3MDc4NTViYTFjNTA5ZThmODQ2NzNlMWM1ZCIsIm5iZiI6MTcyMjE0ODA0MC4wNTMzOCwic3ViIjoiNjZhMjhlZjJkOWVjODExOTQ4Y2Y4NzhlIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.kh2ntUjrpMzZe4eZ35vG2fEDkfuiHSz9dzLGJ6PHcfw",
+    },
+  };
+
+  try {
+    const response = await axios.get(
+      "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
+      options
+    );
+    console.log(response.data);
+    return response.data.results || [];
+  } catch (error) {
+    console.log(error.message);
+    return [];
+  }
+};
+
+const Recently = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const getData = async () => {
+    try {
+      const movies = await fetchMovie();
+      setData(movies);
+    } catch (err) {
+      setError("Failed to fetch data");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const slides = document.getElementsByClassName('mySlides');
-    const dots = document.getElementsByClassName('dot');
-    if (slides.length === 0) return;
+    getData();
+  }, []);
 
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' active', '');
-    }
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-  }, [slideIndex]);
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
 
-  const plusSlides = (n) => {
-    setSlideIndex((prevIndex) => {
-      let newIndex = prevIndex + n;
-      const slides = document.getElementsByClassName('mySlides');
-      if (newIndex > slides.length) newIndex = 1;
-      if (newIndex < 1) newIndex = slides.length;
-      return newIndex;
-    });
+  const moviesPerPage = 4;
+  const totalPages = Math.ceil(data.length / moviesPerPage);
+
+  const nextPage = () => {
+    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
   };
 
-  const currentSlide = (n) => {
-    setSlideIndex(n);
+  const prevPage = () => {
+    setCurrentPage((prevPage) =>
+      prevPage - 1 < 0 ? totalPages - 1 : prevPage - 1
+    );
   };
+
+  const currentMovies = data.slice(
+    currentPage * moviesPerPage,
+    currentPage * moviesPerPage + moviesPerPage
+  );
 
   return (
-    <div>
-      <div className="slideshow-container">
-        <div className="mySlides fade">
-          <Card />
-        </div>
-
-        <div className="mySlides fade">
-          <Card />
-        </div>
-
-        <div className="mySlides fade">
-          <Card />
-        </div>
-
-        <a className="prev" onClick={() => plusSlides(-1)}>❮</a>
-        <a className="next" onClick={() => plusSlides(1)}>❯</a>
+    <div className="recently">
+      <h1>Recently Updated</h1>
+      <div className="recently-movies">
+        {currentMovies.map((item, i) => (
+          <div className="recently-realesed" key={i}>
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+              alt={item.original_title}
+            />
+            <div className="time-realesed">{item.original_title}</div>
+          </div>
+        ))}
       </div>
-      <br />
-
-      <div style={{ textAlign: 'center' }}>
-        <span className="dot" onClick={() => currentSlide(1)}></span>
-        <span className="dot" onClick={() => currentSlide(2)}></span>
-        <span className="dot" onClick={() => currentSlide(3)}></span>
+      <div className="pagination-controls">
+        <button className="prev" onClick={prevPage}>
+          ❮ Previous
+        </button>
+        <button className="next" onClick={nextPage}>
+          Next ❯
+        </button>
       </div>
     </div>
   );
 };
 
-export default Staff;
+export default Recently;
