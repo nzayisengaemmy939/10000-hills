@@ -188,3 +188,137 @@ gap:20px;
     width: 100px;
     height: 1px;
 }
+/* about user submit component */
+.submit-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000; /* Higher z-index to ensure it overlays other content */
+}
+.submit-case{
+z-index: 1;
+background-color: white;
+border: 1px solid hsla(0, 0%, 0%, 0.174);
+height: auto;
+/* border-radius: px; */
+box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.174);
+width: 50%;
+}
+.submit-case form{
+    display: flex;
+    flex-direction: column;
+}
+.close{
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+ 
+    font-size: 18px;
+    color: hsla(0, 100%, 50%, 0.589);
+}
+.submit-case p{
+    margin-left: 15%;
+    font-size: 24px;
+}
+.submit-case label{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-left: 15%;
+    
+    margin-top: 10px;
+
+}
+.submit-case label select{
+    width: 80%;
+    height: 40px;
+    /* background-color:  #EDF5F4; */
+
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case label input{
+    width: 80%;
+    height: 40px;
+    /* background-color:  #D1D5DB; */
+
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case label textarea{
+    width: 80%;
+    /* background-color:  #D1D5DB; */
+    height: 130px; 
+    border: 1.5px solid hsla(0, 0%, 0%, 0.217);
+    border-radius: 6px;
+}
+.submit-case  button{
+    width:68%;
+ 
+    height: 40px; 
+   
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    margin-left: 15%;
+    /* margin: auto; */
+    margin-top: 10px;
+    background-color: #021742;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.prof-detail{
+    position: absolute;
+    right: 50px;
+    top: 0x;
+    /* z-index: 1; */
+    padding:10px;
+    /* width: 600px; */
+    /* color: red; */
+    height: auto;
+    background-color:#edf1fd;
+    border: 1px solid hsla(0, 0%, 0%, 0.135);
+    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.477);
+    border-radius: 5px;
+    /* display: none; */
+  }
+#alldetails{
+    display: flex;
+    gap: 50px;
+    
+    /* background-color:#021742; */
+    justify-content: space-evenly;
+  }
+  .detailicon{
+    width: 15px;
+    height: 15px;
+  }
+  .profile-data{
+    color:hsla(0, 0%, 0%, 0.53)
+  } 
+  .prof-detail span{
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+  }
+  .profile-footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile-footer img{
+    filter: invert(-50%);
+  }
+  .edit{
+    border: 1px solid blue;
+    padding: 2px;
+    border-radius: 2px;
+  }

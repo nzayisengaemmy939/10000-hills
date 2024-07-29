@@ -13,9 +13,7 @@ import AllTeam from '../team/team.jsx';
 import Services from '../services/services.jsx';
 import Footer from '../footer/footer.jsx';
 import Staff from '../Staff/Staff.jsx';
-// import DashPage from '../userDashboard/UserDash.jsx'
-// import Login from '../Login/loginComponent.jsx'
-// import Signup from '../signup/SignupComponent.jsx';
+
 
 const texts = [
   "Welcome to our website. We provide the best services.",
@@ -61,15 +59,14 @@ const Welcome = () => {
       <img src={downimg} alt=""downimg />
     </div> */}
     <AboutUs />
-    <Staff></Staff>
+    {/* <Staff></Staff> */}
     
     <Services />
     < AllTeam/>
 
     < Footer />
-   {/* <DashPage></DashPage> */}
-    {/* <Login></Login> */}
-    {/* <Signup></Signup> */}
+ 
+
     </div>
     
   );

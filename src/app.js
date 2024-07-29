@@ -6,6 +6,8 @@ import AboutUs from "./components/aboutus/aboutus.jsx";
 import AllTeam from "./components/team/team.jsx";
 import Services from "./components/services/services.jsx";
 import Footer from "./components/footer/footer.jsx";
+import UserDash from "./components/userDashboard/UserDash.jsx";
+import StaffDash from "./components/StaffAdmin/StaffDash.jsx";
 
 export function App(){
   return (
@@ -14,7 +16,7 @@ export function App(){
       {/* <ToastContainer /> */}
       <main>
         <Routes>
-          <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<StaffDash />} />
           <Route path="/team" element={<Footer />} />
 
           
