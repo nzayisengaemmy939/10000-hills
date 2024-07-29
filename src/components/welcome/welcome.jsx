@@ -3,6 +3,7 @@ import React from 'react';
 import HomeNav from '../homenav/HomeNav.jsx';
 import './welcomestyles.scss';
 import '../chardipslay/chardisplay.scss';
+import Dash from '../userDashboard/UserDash.jsx'
 
 import downimg from '../../assets/images/down.png'
 import Slideshow from '../himeslider/homeslides.jsx';
@@ -12,6 +13,9 @@ import AllTeam from '../team/team.jsx';
 import Services from '../services/services.jsx';
 import Footer from '../footer/footer.jsx';
 import Staff from '../Staff/Staff.jsx';
+// import DashPage from '../userDashboard/UserDash.jsx'
+// import Login from '../Login/loginComponent.jsx'
+// import Signup from '../signup/SignupComponent.jsx';
 
 const texts = [
   "Welcome to our website. We provide the best services.",
@@ -61,7 +65,11 @@ const Welcome = () => {
     
     <Services />
     < AllTeam/>
+
     < Footer />
+   {/* <DashPage></DashPage> */}
+    {/* <Login></Login> */}
+    {/* <Signup></Signup> */}
     </div>
     
   );

@@ -18,7 +18,16 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: 'svg-url-loader',
       },
       {
         test: /\.css$/,
@@ -28,8 +37,8 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader', // Injects styles into DOM
-          'css-loader', // Turns CSS into CommonJS
-          'sass-loader' // Compiles Sass to CSS
+          'css-loader',   // Turns CSS into CommonJS
+          'sass-loader'   // Compiles Sass to CSS
         ],
       },
       {
